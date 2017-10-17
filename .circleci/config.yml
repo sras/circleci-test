@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/ci-test
+    docker:
+      - image: sras/vacationlabs-ubuntu
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: cache
+
+      - run: stack build
+
+      - save_cache:
+          paths:
+            - ~/.stack
+          key: cache
