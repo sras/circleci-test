@@ -38,6 +38,7 @@ library
                      , servant-blaze
                      , bytestring
                      , wai
+                     , opaleye
   default-language:   Haskell2010
 
 executable circleci-test-exe
