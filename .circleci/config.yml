@@ -10,7 +10,7 @@ jobs:
       - restore_cache:
           key: cache
 
-      - run: stack build
+      - run: stack build --system-ghc
 
       - save_cache:
           paths:
